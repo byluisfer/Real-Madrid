@@ -1,0 +1,356 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  .navbar-container,
+  .kits-typen,
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo img,
+  .footer-logo img {
+    width: 60px;
+  }
+
+  .search-bar input[type="text"] {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .navbar-icons i,
+  .social-icon,
+  .app-store,
+  .google-play {
+    font-size: 1.5rem;
+    margin: 5px 0;
+  }
+
+  .image-slider,
+  .image-container {
+    flex-direction: column;
+  }
+
+  .icono-boton {
+    font-size: 30px;
+  }
+
+  .image-container img {
+    margin: 10px 0;
+  }
+
+  .kit {
+    width: 90%;
+  }
+
+  .kit img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .kit h3,
+  .kit button {
+    font-size: 1rem;
+  }
+
+  .footer-section {
+    padding: 20px 10px;
+  }
+
+  .footer-content {
+    text-align: center;
+  }
+
+  .social-media,
+  .app-download,
+  .information {
+    margin: 10px 0;
+  }
+}
+
+button {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #6e51f0;
+  padding: 10px 20px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: auto;
+  width: 80px;
+}
+
+.fa-solid {
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.search-bar input[type="text"] {
+  width: 800px;
+  padding: 10px;
+  margin: 0 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 20px;
+}
+
+.navbar-icons {
+  font-size: 2rem;
+  color: white;
+}
+
+.navbar-icons i {
+  margin-left: 30px;
+}
+
+.icon-link {
+  margin-top: 0;
+  display: flex;
+  z-index: 10;
+  color: white;
+  font-size: 80px;
+  text-decoration: none;
+  justify-content: end;
+  transition: transform 0.3s ease;
+  z-index: 1000000;
+}
+
+.icon-link:hover,
+.icon-link:focus {
+  transform: scale(1.1);
+}
+
+.main-banner {
+  max-width: 1250px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.main-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner-info {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-family: "Fredoka";
+  font-size: 30px;
+}
+
+.banner-info h1 {
+  margin-bottom: 20px;
+}
+
+.banner-info button {
+  padding: 10px 20px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 5px solid white;
+  border-radius: 15px;
+  font-size: 30px;
+  font-family: "Fredoka";
+  padding: 20px;
+  width: 300px;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-size: 24px;
+}
+
+.image-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.image-container {
+  max-width: 1200px;
+  margin: 0 20px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+.icono-boton {
+  background: none;
+  border: none;
+  color: #021218;
+  font-size: 40px;
+  padding: 10px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.icono-boton:hover {
+  color: #6e51f0;
+}
+
+/* ---------------------------------------KITS SECTION------------------------------------------------- */
+
+.kits-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 5% 5%;
+  box-sizing: border-box;
+}
+.kits-section hr {
+  width: 100%;
+  border: 3px solid #6e51f0;
+  margin: 20px auto;
+  margin-top: -10px;
+  border-radius: 20px;
+}
+
+.kits-section h2 {
+  font-family: "Fredoka";
+  font-weight: 500;
+  font-size: calc(2rem + 2vw);
+  color: #021218;
+  margin: 20px 0;
+}
+
+.kits-typen {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.kit {
+  border: 1px solid #7279f3;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #7279f3;
+}
+
+.kit img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.kit h3 {
+  font-family: "Fredoka";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  color: #021218;
+}
+
+.kit button {
+  background-color: #021218;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.kit button:hover {
+  background-color: white;
+  color: #021218;
+}
+
+.icon-link {
+  color: #6e51f0;
+}
+
+/* ---------------------------------------FOOTER SECTION------------------------------------------------- */
+
+.footer-section {
+  margin-top: 100px;
+  background-color: #7279f3;
+  color: white;
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Fredoka", sans-serif;
+}
+
+.footer-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  color: #021218;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.social-icon,
+.app-store,
+.google-play {
+  font-size: 30px;
+  margin: 0 10px;
+  color: #021218;
+}
+
+.footer-logo img {
+  max-width: 100px;
+  margin-top: 20px;
+}
+
+.information a {
+  color: #021218;
+  text-decoration: none;
+}
+
+.social-icon:hover,
+.app-store:hover,
+.google-play:hover {
+  color: white;
+  background: none;
+}
+
+.information a:hover {
+  text-decoration: underline;
+}

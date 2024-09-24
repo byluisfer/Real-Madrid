@@ -1,0 +1,717 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background: #7279f3;
+  height: 80px;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s ease-in-out;
+  position: fixed;
+}
+
+label.logo {
+  color: #021218;
+  font-size: 40px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+  font-family: "Fredoka";
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: #021218;
+  font-size: 25px;
+  padding: 7px 25px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-family: "Fredoka";
+}
+
+a:hover {
+  background: #021218;
+  color: white;
+  transition: 0.5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+  }
+  label.logo {
+    font-size: 30px;
+    padding-left: 40px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #6e51f0;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover {
+    background: none;
+    color: blueviolet;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+  .news-section {
+    margin: 20px 10px;
+  }
+
+  .news-title,
+  .calendar-title,
+  .tickets-title,
+  .shop-title,
+  .honours-title {
+    font-size: 1.8rem;
+    margin: 15px 0;
+  }
+
+  .news-section hr {
+    margin: 20px 0;
+  }
+
+  .images-news {
+    flex-direction: column;
+  }
+
+  .photo-title {
+    flex-basis: 100%;
+  }
+
+  .mbappe-news,
+  .bellingham-news,
+  .nfl-news {
+    max-width: 90%;
+  }
+
+  .mbappe-title {
+    font-size: 1.5rem !important;
+  }
+
+  .bellingham-title,
+  .nfl-title {
+    font-size: 1.2rem !important;
+  }
+
+  .more-news-button,
+  .more-matchs-button,
+  .visit-shop-button,
+  .more-honours-button {
+    font-size: 18px !important;
+    padding: 8px 16px;
+  }
+
+  .modal-content {
+    padding: 10px !important;
+    right: 20px;
+  }
+
+  .mbappe-news-little-title,
+  .bellingham-news-little-title,
+  .nfl-news-little-title {
+    margin-top: 25px;
+  }
+
+  .mbappe-news-little-title,
+  .bellingham-news-little-title,
+  .nfl-news-little-title,
+  .mbappe-news-little-subtitle,
+  .bellingham-news-little-subtitle,
+  .nfl-news-little-subtitle {
+    font-size: 24px !important;
+  }
+
+  .mbappe-news-little-text,
+  .bellingham-news-little-text,
+  .nfl-news-little-text {
+    font-size: 18px !important;
+  }
+
+  .text-left,
+  .text-right {
+    margin: 10px 0;
+  }
+
+  .visit-shop-button {
+    padding: 8px 16px;
+    max-width: 90%;
+  }
+  .visit-shop-image {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+  .honour-square {
+    max-width: calc(50% - 40px);
+  }
+
+  .team-photo {
+    min-height: 150px;
+  }
+
+  .trophy-icon {
+    max-height: 60px;
+    min-height: 60px;
+  }
+
+  .trophy-count {
+    font-size: 16px;
+  }
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-media,
+  .app-download,
+  .information {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .social-icon,
+  .app-store,
+  .google-play {
+    font-size: 24px;
+    margin: 0 5px;
+  }
+
+  .footer-logo img {
+    max-width: 80px;
+    margin: 20px 0;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  img,
+  .some-container {
+    max-width: 100%;
+    height: auto;
+  }
+  .modal-content {
+    margin: 20px auto;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.big-real-madrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 650px auto;
+  margin: 20px auto;
+  width: 90%;
+  margin-top: 100px;
+}
+
+.big-real-madrid img {
+  max-height: 650px;
+  width: auto;
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+/* ---------------------------------------------------------NEWS SECTION-------------------------------------------------------------- */
+
+.news-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 5% 5%;
+  box-sizing: border-box;
+}
+
+.news-section hr {
+  width: 100%;
+  border: 3px solid #6e51f0;
+  margin: 20px auto;
+  margin-top: -10px;
+  border-radius: 20px;
+}
+
+.news-title,
+.calendar-title,
+.tickets-title,
+.shop-title,
+.honours-title {
+  font-family: "Fredoka";
+  font-weight: 500;
+  font-size: calc(2rem + 2vw);
+  color: #021218;
+  margin: 20px 0;
+}
+
+.images-news {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.photo-title {
+  flex-basis: calc(50% - 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.mbappe-news {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  border: 5px solid #6e51f0;
+  cursor: pointer;
+}
+
+.bellingham-news,
+.nfl-news {
+  max-width: 70%;
+  height: auto;
+  border-radius: 20px;
+  border: 5px solid #6e51f0;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.nfl-news {
+  margin-top: 20px;
+}
+
+.mbappe-news:hover,
+.bellingham-news:hover,
+.nfl-news:hover {
+  box-shadow: 0 0 15px 5px rgba(110, 81, 240, 1);
+}
+
+.mbappe-title {
+  font-family: "Fredoka";
+  font-size: 2.2rem;
+  margin-top: 10px;
+}
+
+.bellingham-title,
+.nfl-title {
+  font-family: "Fredoka";
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.more-news-button {
+  background-color: #3d83cf;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: white;
+  border: none;
+  font-size: 50px;
+  cursor: pointer;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 50px;
+  transition: background-color 0.6s, transform 0.6s;
+  font-family: "Fredoka";
+}
+
+.more-news-button:hover {
+  background-color: #7279f3;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px 5px rgba(110, 81, 240, 0.7);
+}
+
+.more-news-button i {
+  margin-left: 10px;
+  transition: transform 0.3s;
+}
+
+.more-news-button:hover i {
+  transform: translateX(5px);
+}
+
+/* -----------------------------------------MODAL NEWS SECTION-------------------------------------------------------------- */
+
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: auto;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background-color: white;
+  margin: 10% auto;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 600px;
+  overflow-y: auto;
+}
+
+.mbappe-news-little-image,
+.bellingham-news-little-image,
+.nfl-news-little-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.mbappe-news-little-title,
+.bellingham-news-little-title,
+.nfl-news-little-title {
+  font-family: "Fredoka";
+  font-style: bold;
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.mbappe-news-little-subtitle,
+.bellingham-news-little-subtitle,
+.nfl-news-little-subtitle {
+  font-family: "Fredoka";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  padding: 20px;
+}
+
+.mbappe-news-little-text,
+.bellingham-news-little-text,
+.nfl-news-little-text {
+  font-family: "Fredoka";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  padding: 20px;
+}
+
+.close {
+  color: grey;
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #6e51f0;
+  cursor: pointer;
+}
+
+/* ---------------------------------------------------------SHOP SECTION-------------------------------------------------------------- */
+
+.shop-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 5% 5%;
+  box-sizing: border-box;
+}
+
+.shop-section hr {
+  width: 100%;
+  border: 3px solid #6e51f0;
+  margin: 20px auto;
+  margin-top: -10px;
+  border-radius: 20px;
+}
+
+.visit-shop-image {
+  max-width: 60%;
+  height: auto;
+  border-radius: 20px;
+  border: 5px solid #6e51f0;
+  margin-bottom: 20px;
+}
+
+.text-left,
+.text-right {
+  font-family: "Fredoka", sans-serif;
+  font-size: calc(1rem + 1vw);
+  color: #ffbf00;
+  margin: 20px 0;
+  writing-mode: horizontal-tb;
+}
+
+.visit-shop-button {
+  background-color: #3d83cf;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: white;
+  border: none;
+  font-size: 50px;
+  cursor: pointer;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 50px;
+  transition: background-color 0.6s, transform 0.6s;
+  font-family: "Fredoka";
+}
+
+.visit-shop-button:hover {
+  background-color: #7279f3;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px 5px rgba(110, 81, 240, 0.7);
+}
+
+.visit-shop-button i {
+  margin-left: 10px;
+  transition: transform 0.3s;
+}
+
+.visit-shop-button:hover i {
+  transform: translateX(5px);
+}
+
+/* ---------------------------------------------------------HONOURS SECTION-------------------------------------------------------------- */
+
+.honours-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 5%;
+  box-sizing: border-box;
+}
+
+.honours-section hr {
+  width: 100%;
+  border: 3px solid #6e51f0;
+  margin: 20px auto;
+  margin-top: -10px;
+  border-radius: 20px;
+}
+
+.honour-square {
+  background-color: #6e51f0;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  flex: 1 1 auto;
+  max-width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+
+.team-photo-container {
+  margin-bottom: -10px;
+}
+
+.team-photo {
+  width: 100%;
+  height: auto;
+  max-height: 00px;
+  min-height: 200px;
+  border-radius: 5px;
+}
+
+.trophy-container {
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Fredoka";
+}
+
+.more-news-button a,
+.more-matchs-button a,
+.visit-shop-button a,
+.more-honours-button a {
+  color: white;
+  text-decoration: none;
+  background: none;
+}
+
+.more-news-button a:visited,
+.more-matchs-button a:visited,
+.visit-shop-button a:visited,
+.more-honours-button a:visited {
+  color: white;
+}
+
+.trophy-icon {
+  height: auto;
+  width: auto;
+  max-height: 80px;
+  min-height: 80px;
+  margin-right: 10px;
+}
+
+.trophy-count {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.honour-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.more-honours-button {
+  background-color: #3d83cf;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: white;
+  border: none;
+  font-size: 50px;
+  cursor: pointer;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 50px;
+  transition: background-color 0.6s, transform 0.6s;
+  font-family: "Fredoka";
+}
+
+.more-honours-button:hover {
+  background-color: #7279f3;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px 5px rgba(110, 81, 240, 0.7);
+}
+
+.more-honours-button i {
+  margin-left: 10px;
+  transition: transform 0.3s;
+}
+
+.more-honours-button:hover i {
+  transform: translateX(5px);
+}
+
+/* ---------------------------------------------------------FOOTER SECTION-------------------------------------------------------------- */
+
+.footer-section {
+  margin-top: 100px;
+  background-color: #7279f3;
+  color: white;
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Fredoka", sans-serif;
+}
+
+.footer-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  color: #021218;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.social-icon,
+.app-store,
+.google-play {
+  font-size: 30px;
+  margin: 0 10px;
+  color: #021218;
+}
+
+.footer-logo img {
+  max-width: 100px;
+  margin-top: 20px;
+}
+
+.information a {
+  color: #021218;
+  text-decoration: none;
+}
+
+.social-icon:hover,
+.app-store:hover,
+.google-play:hover {
+  color: white;
+  background: none;
+}
+
+.information a:hover {
+  text-decoration: underline;
+}
